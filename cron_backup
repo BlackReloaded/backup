@@ -1,0 +1,2 @@
+13 */12 * * * backup.sh create
+27 3 * * * 0 backup.sh cleanup
