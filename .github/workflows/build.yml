@@ -21,4 +21,4 @@ jobs:
       - uses: docker/build-push-action@v2.2.2
         with:
           push: true
-          tags:  blackreloaded/backup:latest
+          tags:  ghcr.io/blackreloaded/backup:latest
