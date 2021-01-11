@@ -17,4 +17,5 @@ jobs:
       # Runs a single command using the runners shell
       - uses: docker/build-push-action@v2.2.2
         with:
-          push: true 
+          push: true
+          tag:  latest
