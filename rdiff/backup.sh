@@ -8,7 +8,7 @@ cleanup() {
     for src in $(echo $BACKUPS | tr ";" "\n"); do
         dst="${src/::/}"
         echo "Cleanup backup source $src to $TARGET/$dst"
-        rdiff-backup --remove-older-than $OLD $src "$TARGET/$dst"
+        rdiff-backup --remove-older-than $OLD "$TARGET/$dst"
     done
     echo "Cleanup complete"
 }
