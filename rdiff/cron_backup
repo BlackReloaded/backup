@@ -1,2 +1,5 @@
-13 */12 * * * backup.sh create
-27 3 * * * 0 backup.sh cleanup
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+13 */12 * * *   root backup.sh create
+27 3    * * *   root backup.sh cleanup

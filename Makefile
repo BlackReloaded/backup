@@ -10,11 +10,11 @@ web:
 	docker build --rm --force-rm --pull -t "${REGISTRY}/web:${TAG}" web
 
 runweb: web
-	docker run -p 8080:8080 "${REGISTRY}/web:${TAG}"
+	docker run -ti -p 8080:8080 "${REGISTRY}/web:${TAG}"
 
 .PHONY: rdiff
 rdiff:
 	docker build --rm --force-rm --pull -t "${REGISTRY}/rdiff:${TAG}" rdiff
 
 runrdiff: rdiff
-	docker run "${REGISTRY}/rdiff:${TAG}"
+	docker run -ti "${REGISTRY}/rdiff:${TAG}"
