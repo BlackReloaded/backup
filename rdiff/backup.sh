@@ -20,7 +20,7 @@ create() {
     for src in $(echo ${BACKUPS} | tr ";" "\n"); do
         dst="${src/::/}"
         echo "Backup source ${src} to ${TARGET}/${dst}"
-        rdiff-backup --print-statistics ${src} "${TARGET}/${dst}"
+        rdiff-backup --print-statistics  --remote-schema 'ssh -C %s "sudo /usr/bin/rdiff-backup --server /"'  ${src} "${TARGET}/${dst}"
         echo "Done"
     done
     echo "backup complete"
